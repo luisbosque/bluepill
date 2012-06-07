@@ -28,7 +28,7 @@ module Bluepill
 
     def cpu_usage(pid)
       `top -b -n 1 -p #{pid} |grep unicorn |awk '{print $9}'`
-      ps_axu[pid] && ps_axu[pid][IDX_MAP[:pcpu]].to_f
+      #ps_axu[pid] && ps_axu[pid][IDX_MAP[:pcpu]].to_f
     end
 
     def memory_usage(pid)
